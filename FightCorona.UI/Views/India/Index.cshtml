@@ -1,0 +1,41 @@
+﻿@using FightCorona.Models
+@using FightCorona.Localization
+
+@model  FightCorona.Models.IndiaDashboardData
+
+@{
+    ViewBag.Title = "Coronavirus India Dashboard";
+    ViewBag.Source = " Ministry of Health and Family Welfare - Government of India";
+    ViewBag.SourceReferenceLink = "https://www.mohfw.gov.in/";
+    ViewBag.LastUpdated = Model.LastUpdated.ToString("dd.MM.yyyy") + " at " + Model.LastUpdated.ToString("hh:mm tt");
+}
+
+<script>
+    var modelData = @JavaScriptConvertor.SerializeObject(Model);
+
+      FusionCharts.ready(function () {
+            var casesOverDaysChart = new FusionCharts(modelData.totalCasesChart);
+            casesOverDaysChart.render();
+            var newCasesOverDaysChart = new FusionCharts(modelData.newCasesChart);
+            newCasesOverDaysChart.render();
+        });
+
+</script>
+<div class="dashboard">
+    <br />
+    @Html.Partial("_DashboardPanel", Model.DashboardPanelData)
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("_DashboardTable", Model.StateWiseData)
+        </div>
+    </div>
+    <br />
+    <div class="row chart">
+        <div id="cases-over-days">Total Cases Chart will load here!</div>
+    </div>
+    <div class="row chart">
+        <div id="new-cases-over-days">New Cases Chart will load here!</div>
+    </div>
+</div>
+

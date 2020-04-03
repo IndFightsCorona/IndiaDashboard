@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Afghanistan" xml:space="preserve">
+    <value>আফগানিস্তান</value>
+  </data>
+  <data name="Albania" xml:space="preserve">
+    <value>আল্বেনিয়া</value>
+  </data>
+  <data name="Algeria" xml:space="preserve">
+    <value>আলজেরিয়া</value>
+  </data>
+  <data name="American_Samoa" xml:space="preserve">
+    <value>আমেরিকান সামোয়া</value>
+  </data>
+  <data name="Andorra" xml:space="preserve">
+    <value>এ্যান্ডোরা</value>
+  </data>
+  <data name="Angola" xml:space="preserve">
+    <value>অ্যাঙ্গোলা</value>
+  </data>
+  <data name="Anguilla" xml:space="preserve">
+    <value>এ্যাঙ্গুইলা</value>
+  </data>
+  <data name="Antarctica" xml:space="preserve">
+    <value>এন্টার্কটিকা</value>
+  </data>
+  <data name="Antigua and Barbuda" xml:space="preserve">
+    <value>অ্যান্টিগুয়া ও বার্বুডা</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value>আর্জিণ্টিনা</value>
+  </data>
+  <data name="Armenia" xml:space="preserve">
+    <value>আরমেনিয়া</value>
+  </data>
+  <data name="Aruba" xml:space="preserve">
+    <value>আরুবা</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>অস্ট্রেলিয়া</value>
+  </data>
+  <data name="Austria" xml:space="preserve">
+    <value>অস্ট্রিয়া</value>
+  </data>
+  <data name="Azerbaijan" xml:space="preserve">
+    <value>আজেরবাইজান</value>
+  </data>
+  <data name="Bahamas" xml:space="preserve">
+    <value>বাহামা</value>
+  </data>
+  <data name="Bahrain" xml:space="preserve">
+    <value>বাহরাইন</value>
+  </data>
+  <data name="Bangladesh" xml:space="preserve">
+    <value>বাংলাদেশ</value>
+  </data>
+  <data name="Barbados" xml:space="preserve">
+    <value>বার্বাডোস</value>
+  </data>
+  <data name="Belarus" xml:space="preserve">
+    <value>বেলারুশ</value>
+  </data>
+  <data name="Belgium" xml:space="preserve">
+    <value>বেলজিয়াম</value>
+  </data>
+  <data name="Belize" xml:space="preserve">
+    <value>বেলিজ</value>
+  </data>
+  <data name="Benin" xml:space="preserve">
+    <value>বেনিন</value>
+  </data>
+  <data name="Bermuda" xml:space="preserve">
+    <value>বারমুডা</value>
+  </data>
+  <data name="Bhutan" xml:space="preserve">
+    <value>ভুটান</value>
+  </data>
+  <data name="Bolivia" xml:space="preserve">
+    <value>বোলিভিয়া</value>
+  </data>
+  <data name="Bosnia and Herzegovina" xml:space="preserve">
+    <value>বসনিয়া ও হার্জেগোভিনা</value>
+  </data>
+  <data name="Botswana" xml:space="preserve">
+    <value>বোট্স্বানা</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>ব্রাজিল</value>
+  </data>
+  <data name="Brunei" xml:space="preserve">
+    <value>ব্রুনেই</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>বুলগেরিয়া</value>
+  </data>
+  <data name="Burkina Faso" xml:space="preserve">
+    <value>বুর্কিনা ফাসো</value>
+  </data>
+  <data name="Burundi" xml:space="preserve">
+    <value>বুরুন্ডি</value>
+  </data>
+  <data name="Cambodia" xml:space="preserve">
+    <value>কাম্বোজ</value>
+  </data>
+  <data name="Cameroon" xml:space="preserve">
+    <value>ক্যামেরুন</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>কানাডা</value>
+  </data>
+  <data name="Cabo Verde" xml:space="preserve">
+    <value>কেপ ভার্দে</value>
+  </data>
+  <data name="Cayman_Islands" xml:space="preserve">
+    <value>কেম্যান দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Central African Republic" xml:space="preserve">
+    <value>মধ্য আফ্রিকান প্রজাতন্ত্র</value>
+  </data>
+  <data name="Chad" xml:space="preserve">
+    <value>মত্স্যবিশেষ</value>
+  </data>
+  <data name="Chile" xml:space="preserve">
+    <value>চিলি</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>চীন</value>
+  </data>
+  <data name="Christmas_Island" xml:space="preserve">
+    <value>ক্রিস্টমাস দ্বীপ</value>
+  </data>
+  <data name="Cocos_Islands" xml:space="preserve">
+    <value>কোকোস (কিলিং) দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Colombia" xml:space="preserve">
+    <value>কলোমবিয়া</value>
+  </data>
+  <data name="Comoros" xml:space="preserve">
+    <value>কমোরোস</value>
+  </data>
+  <data name="Congo (Kinshasa)" xml:space="preserve">
+    <value>কঙ্গো (কিনশাসা)</value>
+  </data>
+  <data name="Congo (Brazzaville)" xml:space="preserve">
+    <value>কঙ্গো (ব্রাজাভিল)</value>
+  </data>
+  <data name="Cook_Islands" xml:space="preserve">
+    <value>কুক দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Costa Rica" xml:space="preserve">
+    <value>কোস্টারিকা</value>
+  </data>
+  <data name="Ivory_Coast" xml:space="preserve">
+    <value>আইভরি কোস্ট</value>
+  </data>
+  <data name="Croatia" xml:space="preserve">
+    <value>ক্রোয়েশিয়া</value>
+  </data>
+  <data name="Cuba" xml:space="preserve">
+    <value>কুবা</value>
+  </data>
+  <data name="Cyprus" xml:space="preserve">
+    <value>সাইপ্রাসদ্বিপ</value>
+  </data>
+  <data name="Czechia" xml:space="preserve">
+    <value>চেক প্রজাতন্ত্র</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>ডেন্মার্ক্</value>
+  </data>
+  <data name="Djibouti" xml:space="preserve">
+    <value>জিবুতি</value>
+  </data>
+  <data name="Dominica" xml:space="preserve">
+    <value>ডোমিনিকা</value>
+  </data>
+  <data name="Dominican Republic" xml:space="preserve">
+    <value>ডোমিনিকান প্রজাতন্ত্র</value>
+  </data>
+  <data name="Timor-Leste" xml:space="preserve">
+    <value>পূর্ব তিমুর (টিমর-লেস্টে)</value>
+  </data>
+  <data name="Ecuador" xml:space="preserve">
+    <value>ইকোয়াডর</value>
+  </data>
+  <data name="Egypt" xml:space="preserve">
+    <value>মিশর</value>
+  </data>
+  <data name="El Salvador" xml:space="preserve">
+    <value>এল সালভাদর</value>
+  </data>
+  <data name="Equatorial Guinea" xml:space="preserve">
+    <value>নিরক্ষীয় গিনি</value>
+  </data>
+  <data name="Eritrea" xml:space="preserve">
+    <value>ইরিত্রিয়া</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>এস্তোনিয়াদেশ</value>
+  </data>
+  <data name="Ethiopia" xml:space="preserve">
+    <value>ইথিওপিয়া</value>
+  </data>
+  <data name="Falkland_Islands" xml:space="preserve">
+    <value>ফকল্যান্ড দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Faroe_Islands" xml:space="preserve">
+    <value>ফারো দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Fiji" xml:space="preserve">
+    <value>ফিজি</value>
+  </data>
+  <data name="Finland" xml:space="preserve">
+    <value>ফিনল্যাণ্ড</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>ফ্রান্স</value>
+  </data>
+  <data name="French_Guiana" xml:space="preserve">
+    <value>একটি দেশের নাম</value>
+  </data>
+  <data name="French_Polynesia" xml:space="preserve">
+    <value>ফরাসি পলিনেশিয়া</value>
+  </data>
+  <data name="French_Southern_Territories" xml:space="preserve">
+    <value>ফরাসি সাউদার্ন টেরিটোরিজ</value>
+  </data>
+  <data name="Gabon" xml:space="preserve">
+    <value>গাবোনবাদ্যযন্ত্র</value>
+  </data>
+  <data name="Gambia" xml:space="preserve">
+    <value>গাম্বিয়াদেশ</value>
+  </data>
+  <data name="Georgia" xml:space="preserve">
+    <value>জর্জিয়া</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>জার্মানি</value>
+  </data>
+  <data name="Ghana" xml:space="preserve">
+    <value>ঘানা</value>
+  </data>
+  <data name="Gibraltar" xml:space="preserve">
+    <value>জিব্রালটার</value>
+  </data>
+  <data name="Great_Britain" xml:space="preserve">
+    <value>গ্রেট ব্রিটেন</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>গ্রীস</value>
+  </data>
+  <data name="Greenland" xml:space="preserve">
+    <value>গ্রীনল্যাণ্ড</value>
+  </data>
+  <data name="Grenada" xml:space="preserve">
+    <value>গ্রেনাডা</value>
+  </data>
+  <data name="Guadeloupe" xml:space="preserve">
+    <value>গুয়াডেলোপ</value>
+  </data>
+  <data name="Guam" xml:space="preserve">
+    <value>গুয়াম</value>
+  </data>
+  <data name="Guatemala" xml:space="preserve">
+    <value>গুয়াটেমালা</value>
+  </data>
+  <data name="Guinea" xml:space="preserve">
+    <value>গিনি</value>
+  </data>
+  <data name="Guinea-Bissau" xml:space="preserve">
+    <value>গিনি-বিসাউ</value>
+  </data>
+  <data name="Guyana" xml:space="preserve">
+    <value>গায়ানা</value>
+  </data>
+  <data name="Haiti" xml:space="preserve">
+    <value>হাইতি</value>
+  </data>
+  <data name="Holy See" xml:space="preserve">
+    <value>সুদৃষ্টিতে দেখ</value>
+  </data>
+  <data name="Honduras" xml:space="preserve">
+    <value>হন্ডুরাস</value>
+  </data>
+  <data name="Hong_Kong" xml:space="preserve">
+    <value>হংকং</value>
+  </data>
+  <data name="Hungary" xml:space="preserve">
+    <value>হাঙ্গেরি</value>
+  </data>
+  <data name="Iceland" xml:space="preserve">
+    <value>আইস্ল্যাণ্ড</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>ভারত</value>
+  </data>
+  <data name="Indonesia" xml:space="preserve">
+    <value>ইন্দোনেশিয়া</value>
+  </data>
+  <data name="Iran" xml:space="preserve">
+    <value>ইরান</value>
+  </data>
+  <data name="Iraq" xml:space="preserve">
+    <value>ইরাক</value>
+  </data>
+  <data name="Ireland" xml:space="preserve">
+    <value>আয়ারল্যাণ্ড</value>
+  </data>
+  <data name="Israel" xml:space="preserve">
+    <value>ইস্রায়েল</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>ইতালি</value>
+  </data>
+  <data name="Ivory_Coast" xml:space="preserve">
+    <value>আইভরি কোস্ট</value>
+  </data>
+  <data name="Jamaica" xml:space="preserve">
+    <value>জ্যামাইকা</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>জাপান</value>
+  </data>
+  <data name="Jordan" xml:space="preserve">
+    <value>জর্ডন</value>
+  </data>
+  <data name="Kazakhstan" xml:space="preserve">
+    <value>কাজাকস্থান</value>
+  </data>
+  <data name="Kenya" xml:space="preserve">
+    <value>কেনিয়া</value>
+  </data>
+  <data name="Kiribati" xml:space="preserve">
+    <value>কিরিবাতি</value>
+  </data>
+  <data name="North, Korea" xml:space="preserve">
+    <value>কোরিয়া, গণতান্ত্রিক গণপ্রজাতন্ত্রী (উত্তর কোরিয়া)</value>
+  </data>
+  <data name="Korea, South" xml:space="preserve">
+    <value>কোরিয়া, প্রজাতন্ত্র (দক্ষিণ কোরিয়া)</value>
+  </data>
+  <data name="Kosovo" xml:space="preserve">
+    <value>কসোভো</value>
+  </data>
+  <data name="Kuwait" xml:space="preserve">
+    <value>কুয়েত</value>
+  </data>
+  <data name="Kyrgyzstan" xml:space="preserve">
+    <value>কিরগিজস্তান</value>
+  </data>
+  <data name="Laos" xml:space="preserve">
+    <value>লাও</value>
+  </data>
+  <data name="Latvia" xml:space="preserve">
+    <value>ল্যাট্ভিআ</value>
+  </data>
+  <data name="Lebanon" xml:space="preserve">
+    <value>লেবানন</value>
+  </data>
+  <data name="Lesotho" xml:space="preserve">
+    <value>লেসোথো</value>
+  </data>
+  <data name="Liberia" xml:space="preserve">
+    <value>লাইবেরিয়া</value>
+  </data>
+  <data name="Libya" xml:space="preserve">
+    <value>লিবিয়া</value>
+  </data>
+  <data name="Liechtenstein" xml:space="preserve">
+    <value>লিচেনস্টেইন</value>
+  </data>
+  <data name="Lithuania" xml:space="preserve">
+    <value>লিত্ভা</value>
+  </data>
+  <data name="Luxembourg" xml:space="preserve">
+    <value>লাক্সেমবার্গ</value>
+  </data>
+  <data name="Macau" xml:space="preserve">
+    <value>ম্যাকাও</value>
+  </data>
+  <data name="North Macedonia" xml:space="preserve">
+    <value>ম্যাসাডোনিয়া</value>
+  </data>
+  <data name="Madagascar" xml:space="preserve">
+    <value>ম্যাডাগ্যাস্কার</value>
+  </data>
+  <data name="Malawi" xml:space="preserve">
+    <value>মালাউই</value>
+  </data>
+  <data name="Malaysia" xml:space="preserve">
+    <value>মাল্যাশিয়া</value>
+  </data>
+  <data name="Maldives" xml:space="preserve">
+    <value>মালদ্বীপ</value>
+  </data>
+  <data name="Mali" xml:space="preserve">
+    <value>মালি</value>
+  </data>
+  <data name="Malta" xml:space="preserve">
+    <value>মালটা</value>
+  </data>
+  <data name="Marshall_Islands" xml:space="preserve">
+    <value>মার্শাল দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Martinique" xml:space="preserve">
+    <value>মার্টিনিক</value>
+  </data>
+  <data name="Mauritania" xml:space="preserve">
+    <value>মরিতানিয়া</value>
+  </data>
+  <data name="Mauritius" xml:space="preserve">
+    <value>মরিশাস</value>
+  </data>
+  <data name="Mayotte" xml:space="preserve">
+    <value>মায়োত্তে</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>মক্সিকো</value>
+  </data>
+  <data name="Micronesia" xml:space="preserve">
+    <value>মাইক্রোনেশিয়া</value>
+  </data>
+  <data name="Moldova" xml:space="preserve">
+    <value>মোল্দাভিয়া</value>
+  </data>
+  <data name="Monaco" xml:space="preserve">
+    <value>মোনাকো</value>
+  </data>
+  <data name="Mongolia" xml:space="preserve">
+    <value>মঙ্গোলিআ</value>
+  </data>
+  <data name="Montenegro" xml:space="preserve">
+    <value>মন্টিনিগ্রো</value>
+  </data>
+  <data name="Montserrat" xml:space="preserve">
+    <value>মন্টসেরাট</value>
+  </data>
+  <data name="Morocco" xml:space="preserve">
+    <value>মরক্কো</value>
+  </data>
+  <data name="Mozambique" xml:space="preserve">
+    <value>মোজাম্বিক</value>
+  </data>
+  <data name="Burma" xml:space="preserve">
+    <value>মায়ানমার</value>
+  </data>
+  <data name="Namibia" xml:space="preserve">
+    <value>নামিবিয়া</value>
+  </data>
+  <data name="Nauru" xml:space="preserve">
+    <value>নাউরু</value>
+  </data>
+  <data name="Nepal" xml:space="preserve">
+    <value>নেপাল</value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>নেদারল্যান্ডস</value>
+  </data>
+  <data name="Netherlands_Antilles" xml:space="preserve">
+    <value>নেদারল্যান্ডস এন্টিলস</value>
+  </data>
+  <data name="New Caledonia" xml:space="preserve">
+    <value>নতুন ক্যালেডোনিয়া</value>
+  </data>
+  <data name="New Zealand" xml:space="preserve">
+    <value>নিউজিল্যান্ড</value>
+  </data>
+  <data name="Nicaragua" xml:space="preserve">
+    <value>নিক্যার্যাগিউআদেশ</value>
+  </data>
+  <data name="Niger" xml:space="preserve">
+    <value>নাইজারনদী</value>
+  </data>
+  <data name="Nigeria" xml:space="preserve">
+    <value>নাইজিরিয়াদেশ</value>
+  </data>
+  <data name="Niue" xml:space="preserve">
+    <value>নিউই</value>
+  </data>
+  <data name="Northern_Mariana_Islands" xml:space="preserve">
+    <value>উত্তর মারিয়ানা দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Norway" xml:space="preserve">
+    <value>নরওয়ে</value>
+  </data>
+  <data name="Oman" xml:space="preserve">
+    <value>ওমান</value>
+  </data>
+  <data name="Pakistan" xml:space="preserve">
+    <value>পাকিস্তান</value>
+  </data>
+  <data name="Palau" xml:space="preserve">
+    <value>পালাউ</value>
+  </data>
+  <data name="Palestinian_territories" xml:space="preserve">
+    <value>প্যালেস্টাইন অঞ্চল</value>
+  </data>
+  <data name="Panama" xml:space="preserve">
+    <value>পানামা</value>
+  </data>
+  <data name="Papua New Guinea" xml:space="preserve">
+    <value>পাপুয়া নিউ গিনি</value>
+  </data>
+  <data name="Paraguay" xml:space="preserve">
+    <value>প্যারাগুয়ে</value>
+  </data>
+  <data name="Peru" xml:space="preserve">
+    <value>পেরু</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>ফিলিপাইন</value>
+  </data>
+  <data name="Pitcairn_Island" xml:space="preserve">
+    <value>পিটকার্ন দ্বীপ</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value>পোল্যান্ড</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>পর্তুগাল</value>
+  </data>
+  <data name="Puerto_Rico" xml:space="preserve">
+    <value>পুয়ের্তো রিকো</value>
+  </data>
+  <data name="Qatar" xml:space="preserve">
+    <value>কাতার</value>
+  </data>
+  <data name="Reunion_Island" xml:space="preserve">
+    <value>পুনর্মিলন দ্বীপ</value>
+  </data>
+  <data name="Romania" xml:space="preserve">
+    <value>রুমানিয়া</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>রাশিয়া</value>
+  </data>
+  <data name="Rwanda" xml:space="preserve">
+    <value>রুয়ান্ডা</value>
+  </data>
+  <data name="Saint Kitts and Nevis" xml:space="preserve">
+    <value>সেন্ট কিটস ও নেভিস</value>
+  </data>
+  <data name="Saint Lucia" xml:space="preserve">
+    <value>সেন্ট লুসিয়া</value>
+  </data>
+  <data name="Saint Vincent and the Grenadines" xml:space="preserve">
+    <value>সেন্ট ভিনসেন্ট ও গ্রেনাডাইন দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Samoa" xml:space="preserve">
+    <value>সামোয়া</value>
+  </data>
+  <data name="San Marino" xml:space="preserve">
+    <value>সান মারিনো</value>
+  </data>
+  <data name="Sao Tome and Principe" xml:space="preserve">
+    <value>সাও টোমে এবং প্রিনসিপে</value>
+  </data>
+  <data name="Saudi Arabia" xml:space="preserve">
+    <value>সৌদি আরব</value>
+  </data>
+  <data name="Senegal" xml:space="preserve">
+    <value>সেনেগাল</value>
+  </data>
+  <data name="Serbia" xml:space="preserve">
+    <value>সার্বিয়া</value>
+  </data>
+  <data name="Seychelles" xml:space="preserve">
+    <value>সিসিলি</value>
+  </data>
+  <data name="Sierra Leone" xml:space="preserve">
+    <value>সিয়েরা লিওন</value>
+  </data>
+  <data name="Singapore" xml:space="preserve">
+    <value>সিঙ্গাপুর</value>
+  </data>
+  <data name="Slovakia" xml:space="preserve">
+    <value>শ্লোভাকিয়া</value>
+  </data>
+  <data name="Slovenia" xml:space="preserve">
+    <value>স্লোভানিয়া</value>
+  </data>
+  <data name="Solomon Islands" xml:space="preserve">
+    <value>সলোমান দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Somalia" xml:space="preserve">
+    <value>সোমালিয়া</value>
+  </data>
+  <data name="South Africa" xml:space="preserve">
+    <value>দক্ষিন আফ্রিকা</value>
+  </data>
+  <data name="South Sudan" xml:space="preserve">
+    <value>দক্ষিণ সুদান</value>
+  </data>
+  <data name="Spain" xml:space="preserve">
+    <value>স্পেন</value>
+  </data>
+  <data name="Sri Lanka" xml:space="preserve">
+    <value>শ্রীলংকা</value>
+  </data>
+  <data name="Sudan" xml:space="preserve">
+    <value>সুদান</value>
+  </data>
+  <data name="Suriname" xml:space="preserve">
+    <value>সুরিনাম</value>
+  </data>
+  <data name="Swaziland" xml:space="preserve">
+    <value>সোয়াজিল্যান্ড</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>সুইডেন</value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>সুইজর্লণ্ড</value>
+  </data>
+  <data name="Syria" xml:space="preserve">
+    <value>সিরিয়া</value>
+  </data>
+  <data name="Taiwan" xml:space="preserve">
+    <value>তাইওয়ান (চীন প্রজাতন্ত্র)</value>
+  </data>
+  <data name="Tajikistan" xml:space="preserve">
+    <value>তাজিকস্থান</value>
+  </data>
+  <data name="Tanzania" xml:space="preserve">
+    <value>তাঞ্জানিয়া</value>
+  </data>
+  <data name="Thailand" xml:space="preserve">
+    <value>থাইল্যান্ড</value>
+  </data>
+  <data name="Tibet" xml:space="preserve">
+    <value>তিব্বত</value>
+  </data>
+  <data name="Timor-Leste (East Timor)" xml:space="preserve">
+    <value>টিমোর-লেস্টে (পূর্ব তিমুর)</value>
+  </data>
+  <data name="Togo" xml:space="preserve">
+    <value>যাও</value>
+  </data>
+  <data name="Tokelau" xml:space="preserve">
+    <value>টোকেলাউ</value>
+  </data>
+  <data name="Tonga" xml:space="preserve">
+    <value>টাঙ্গা</value>
+  </data>
+  <data name="Trinidad and Tobago" xml:space="preserve">
+    <value>ত্রিনিদাদ ও টোবাগো</value>
+  </data>
+  <data name="Tunisia" xml:space="preserve">
+    <value>টিউনিস্</value>
+  </data>
+  <data name="Turkey" xml:space="preserve">
+    <value>তুরস্ক</value>
+  </data>
+  <data name="Turkmenistan" xml:space="preserve">
+    <value>তুর্কমেনিয়া</value>
+  </data>
+  <data name="Turks and Caicos Islands" xml:space="preserve">
+    <value>টার্কস্ ও কেইকোস দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Tuvalu" xml:space="preserve">
+    <value>টুভালু</value>
+  </data>
+  <data name="Uganda" xml:space="preserve">
+    <value>উগান্ডা</value>
+  </data>
+  <data name="Ukraine" xml:space="preserve">
+    <value>ইউক্রেইন্</value>
+  </data>
+  <data name="United Arab Emirates" xml:space="preserve">
+    <value>সংযুক্ত আরব আমিরাত</value>
+  </data>
+  <data name="United Kingdom" xml:space="preserve">
+    <value>যুক্তরাজ্য</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>যুক্তরাষ্ট্র</value>
+  </data>
+  <data name="Uruguay" xml:space="preserve">
+    <value>উরুগুয়ে</value>
+  </data>
+  <data name="Uzbekistan" xml:space="preserve">
+    <value>উজ্বেকিস্থান</value>
+  </data>
+  <data name="Vanuatu" xml:space="preserve">
+    <value>ভানুয়াতু</value>
+  </data>
+  <data name="Vatican City State (Holy See)" xml:space="preserve">
+    <value>ভ্যাটিকান সিটি রাজ্য (হলি দেখুন)</value>
+  </data>
+  <data name="Venezuela" xml:space="preserve">
+    <value>ভেনেজুয়েলা</value>
+  </data>
+  <data name="Vietnam" xml:space="preserve">
+    <value>ভিয়েতনাম</value>
+  </data>
+  <data name="Virgin Islands (British)" xml:space="preserve">
+    <value>ভার্জিন দ্বীপপুঞ্জ (ব্রিটিশ)</value>
+  </data>
+  <data name="Virgin Islands (U.S.)" xml:space="preserve">
+    <value>ভার্জিন দ্বীপপুঞ্জ (মার্কিন যুক্তরাষ্ট্র)</value>
+  </data>
+  <data name="Wallis and Futuna Islands" xml:space="preserve">
+    <value>ওয়ালিস এবং ফুটুনা দ্বীপপুঞ্জ</value>
+  </data>
+  <data name="Western Sahara" xml:space="preserve">
+    <value>পশ্চিম সাহারা</value>
+  </data>
+  <data name="Yemen" xml:space="preserve">
+    <value>ইমেন</value>
+  </data>
+  <data name="Zambia" xml:space="preserve">
+    <value>জাম্বিয়া</value>
+  </data>
+  <data name="Zimbabwe" xml:space="preserve">
+    <value>জিম্বাবুয়ে</value>
+  </data>
+</root>

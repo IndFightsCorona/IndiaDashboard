@@ -1,0 +1,194 @@
+﻿@using FightCorona.Localization;
+@using FightCorona.Models;
+
+@model  List<FightCorona.Models.CountryData>
+
+<div class="row">
+    <div class="row chart">
+        <div id="worldmap"></div>
+    </div>
+
+    <div class="description">
+        <div class="topToolTip">
+            <div class="titleInfoBox"></div>
+            <div class="total">Total Cases</div>
+            <span>200</span>
+            <div class="activecases">Active Cases</div>
+            <span>190</span>
+            <div class="recovered">Recovered</div>
+            <span>100</span>
+            <div class="death">Death</div>
+            <span>10</span>
+            <i></i>
+        </div>
+    </div>
+</div>
+
+@*By Design, section doesn't work in partial views, move this to main view for map to work*@
+
+@section scripts {
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+    <script type="text/javascript">
+        var modelData = @JavaScriptConvertor.SerializeObject(Model);
+        var colorScale = d3.scaleThreshold()
+            .domain([100, 1000, 10000, 30000, 100000])
+            .range(d3.schemeReds[6]);
+        $(document).ready(function () {
+            renderWorldMap();
+            $(window).resize(function () {
+                renderWorldMap();
+            });
+
+            //Map Legend
+            var w = 200, h = 50;
+
+            var key = d3.select("#legend")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            var legend = key.append("defs")
+                .append("svg:linearGradient")
+                .attr("id", "gradient")
+                .attr("x1", "0%")
+                .attr("y1", "100%")
+                .attr("x2", "100%")
+                .attr("y2", "100%")
+                .attr("spreadMethod", "pad");
+
+            legend.append("stop")
+                .attr("offset", "0%")
+                .attr("stop-color", colorScale(0))
+                .attr("stop-opacity", 1);
+
+            legend.append("stop")
+                .attr("offset", "33%")
+                .attr("stop-color", colorScale(10000))
+                .attr("stop-opacity", 1);
+
+            legend.append("stop")
+                .attr("offset", "66%")
+                .attr("stop-color", colorScale(66000))
+                .attr("stop-opacity", 1);
+
+            legend.append("stop")
+                .attr("offset", "100%")
+                .attr("stop-color", colorScale(100000))
+                .attr("stop-opacity", 1);
+
+            key.append("rect")
+                .attr("width", w)
+                .attr("height", h - 30)
+                .style("fill", "url(#gradient)")
+                .attr("transform", "translate(0,10)");
+
+            var y = d3.scaleLinear()
+                .range([200, 0])
+                .domain([100000, 100]);
+
+            var yAxis = d3.axisBottom()
+                .scale(y)
+                .ticks(5);
+
+            key.append("g")
+                .attr("class", "y axis")
+                .attr("transform", "translate(0,30)")
+                .call(yAxis)
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text("axis title");
+        });
+        function renderWorldMap() {
+            $("#worldmap").html("");
+            // The svg
+            var map = d3.select("#worldmap"),
+                width = +map.node().getBoundingClientRect().width,
+                height = +width / 2;
+            var svg = map.append("svg")
+                .attr("width", width)
+                .attr("height", height);
+            var scale = $(window).width() / 10;
+            // Map and projection
+            var path = d3.geoPath();
+            var projection = d3.geoMercator()
+                .scale(scale > 100 ? 100 : scale)
+                .center([0, 30])
+                .translate([width / 2, height / 2]);
+
+            // Data and color scale
+            var data = d3.map();
+
+
+            // Load external data and boot
+            d3.queue()
+                .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
+                .defer(d3.csv, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function (d) { data.set(d.code, +d.pop); })
+                .await(ready);
+
+            function ready(error, topo) {
+
+                // Draw the map
+                svg.append("g")
+                    .selectAll("path")
+                    .data(topo.features)
+                    .enter()
+                    .append("path")
+                    // draw each country
+                    .attr("d", d3.geoPath()
+                        .projection(projection))
+                    .attr("id", function (d) { return d.properties.name })
+                    .attr("stroke-width", "1")
+                    .attr("stroke", "skyblue")
+                    // set the color of each country
+                    .attr("fill", function (d) {
+                        if (modelData.find(f => f.location === d.properties.name)) {
+                            d.total = modelData.find(f => f.location === d.properties.name).confirmed || 0;
+                        } else {
+                            d.total = 0;
+                        }
+                        return colorScale(d.total);
+                    }).attr("onmouseover", "maphover(this)").attr("onmouseout", "maphoverout(this)");
+            }
+            $description = $(".description");
+            $(document).on('mousemove', function (e) {
+                $description.css({
+                    left: e.pageX,
+                    top: e.pageY - $description.outerHeight()
+                });
+
+            });
+        }
+        function maphover(event) {
+            $(event).attr("class", "enabled heyo");
+            $description.addClass('active');
+            $description.find(".titleInfoBox").html($(event).attr('id'));
+            if (modelData.find(f => f.location === $(event).attr('id'))) {
+                var confirmed = modelData.find(f => f.location === $(event).attr('id')).confirmed;
+                var active = modelData.find(f => f.location === $(event).attr('id')).active;
+                var recovered = modelData.find(f => f.location === $(event).attr('id')).recovered;
+                var deaths = modelData.find(f => f.location === $(event).attr('id')).deaths;
+                $description.find(".total").next("span").html(confirmed);
+                $description.find(".activecases").next("span").html(active);
+                $description.find(".recovered").next("span").html(recovered);
+                $description.find(".death").next("span").html(deaths);
+            } else {
+                $description.find(".total").next("span").html("-");
+                $description.find(".activecases").next("span").html("-");
+                $description.find(".recovered").next("span").html("-");
+                $description.find(".death").next("span").html("-");
+            }
+
+        }
+        function maphoverout(event) {
+            $(event).removeClass("enabled heyo");
+            $description.removeClass('active');
+        };
+    </script>
+}
+

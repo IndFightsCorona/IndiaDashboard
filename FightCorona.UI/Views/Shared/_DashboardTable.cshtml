@@ -1,0 +1,52 @@
+﻿@using FightCorona.Models;
+@using FightCorona.Localization;
+
+@model  FightCorona.Models.DashboardTableData
+
+<div class="panel panel-primary">
+    <div class="panel-heading">@Model.TableHeader</div>
+    <div class="padd-rem">
+        <div class="table-responsive table-wrap">
+            <table border="1" cellspacing="1" cellpadding="1" class="table-bordered table-striped table-condensed cf dashboardTable">
+                <thead class="thead-dark cf">
+                    <tr bgcolor="#f8f8f8">
+                        <th align="center" width="83"><strong>@Model.LocationDescription</strong></th>
+                        <th align="center" width="91"><strong>@LocalizationService.GetText(ResourceCategory.Dashboard, "Confirmed" )</strong></th>
+                        @*<th align="center" width="83"><strong>@LocalizationService.GetText(ResourceCategory.Dashboard, "Active")</strong></th>*@
+                        <th align="center" width="83"><strong>@LocalizationService.GetText(ResourceCategory.Dashboard, "Recovered")</strong></th>
+                        <th align="center" width="83"><strong>@LocalizationService.GetText(ResourceCategory.Dashboard, "Deaths")</strong></th>
+                    </tr>
+                </thead>
+
+                <!-- data start-->
+
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                    <tr>
+                        <td align="center" width="83" valign="bottom">@(LocalizationService.GetText(Model.ResourceCategory, item.Code) ?? item.Code)</td>
+                        <td align="center" width="91" valign="bottom">@item.Total</td>
+                        @*<td align="center" width="91" valign="bottom">@item.Active</td>*@
+                        <td align="center" width="83" valign="top">@item.Cured</td>
+                        <td align="center" width="83" valign="top">@item.Deaths</td>
+                    </tr>
+                    }
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td align="center" height="61" valign="middle"><strong>@LocalizationService.GetText(ResourceCategory.Dashboard, "Total")</strong></td>
+                        <td align="center" width="91" valign="middle"><strong>@(Model.Items.Sum(s => s.Total))</strong></td>
+                        @*<td align="center" width="91" valign="middle"><strong>@(Model.Items.Sum(s => s.Active))</strong></td>*@
+                        <td align="center" width="83" valign="middle">
+                            <strong>@Model.Items.Sum(s => s.Cured)</strong>
+                        </td>
+                        <td align="center" width="83" valign="middle">
+                            <strong>@Model.Items.Sum(s => s.Deaths)</strong>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

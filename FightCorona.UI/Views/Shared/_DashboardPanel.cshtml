@@ -1,0 +1,42 @@
+﻿@using FightCorona.Models
+@using FightCorona.Localization
+
+@model  FightCorona.Models.DashboardPanelData
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">@LocalizationService.GetText(ResourceCategory.Dashboard, "Confirmed")</div>
+            <div class="panel-body">
+                <span class="cases-panel-main-text">@Model.TotalCases</span>
+                <span class="cases-panel-sub-text">@Model.NewCases @LocalizationService.GetText(ResourceCategory.Dashboard, "NewCases").ToLower()</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-warning">
+            <div class="panel-heading">@LocalizationService.GetText(ResourceCategory.Dashboard, "ActiveCases")</div>
+            <div class="panel-body">
+                <span class="cases-panel-main-text">@Model.ActiveCases</span>
+                <span class="cases-panel-sub-text">@String.Format(@LocalizationService.GetText(ResourceCategory.Dashboard, "OfTotalCases"), Model.ActiveCasesVsTotalCases + "%")</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">@LocalizationService.GetText(ResourceCategory.Dashboard, "Recovered")</div>
+            <div class="panel-body">
+                <span class="cases-panel-main-text">@Model.Recovered</span>
+                <span class="cases-panel-sub-text">@String.Format(@LocalizationService.GetText(ResourceCategory.Dashboard, "OfTotalCases"), Model.RecoveredVsTotalCases + "%")</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-danger">
+            <div class="panel-heading">@LocalizationService.GetText(ResourceCategory.Dashboard, "Deaths")</div>
+            <div class="panel-body">
+                <span class="cases-panel-main-text">@Model.Deaths</span>
+                <span class="cases-panel-sub-text">@String.Format(@LocalizationService.GetText(ResourceCategory.Dashboard, "OfTotalCases"), Model.DeathsVsTotalCases + "%")</span>
+            </div>
+        </div>
+    </div>
+</div>

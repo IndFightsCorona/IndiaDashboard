@@ -1,0 +1,168 @@
+﻿@using FightCorona.Business.Services
+@using FightCorona.Localization
+@using FightCorona.Models
+@using System.Threading;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Corona Virus India Dashboard.">
+    <title>@ViewBag.Title - FightCorona</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Fusioncharts  -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    @Html.Partial("_GoogleAnalytics")
+    @Html.Partial("_SEO")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="hidden-lg hidden-md lang-mobile-right">
+                        @Html.DropDownList("Language", new SelectList(LanguageService.GetLanguageOptions(), "Value", "Text", Thread.CurrentThread.CurrentUICulture.Name), new { @class = "form-control lang-select-drop-down", @id = "languageOptions" })
+                    </li>
+                </ul>
+                @Html.ActionLink("Fight Corona", "", "", new { area = "" }, new { @class = "navbar-brand brand" })
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li>@Html.ActionLink(LocalizationService.GetText(ResourceCategory.Countries, "India"), "", "")</li>
+                    <li>@Html.ActionLink(LocalizationService.GetText(ResourceCategory.Dashboard, "World"), "Index", "world")</li>
+                    <li class="hidden-sm hidden-xs lang-top-8">
+                        @Html.DropDownList("Language", new SelectList(LanguageService.GetLanguageOptions(), "Value", "Text", Thread.CurrentThread.CurrentUICulture.Name), new { @class = "form-control lang-select-drop-down", @id = "languageOptionsDesktop" })
+                    </li>
+                    @*<li>@Html.ActionLink("Sources", "Index", "Sources")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="source">
+        <div class="container">
+            Source: <a href="@ViewBag.SourceReferenceLink" target="_blank">@ViewBag.Source | @ViewBag.LastUpdated</a>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="contactUsModal" role="dialog">
+        <div class="modal-dialog modal-md">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Contact US</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="ContactUs">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="name">Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="name" required id="name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">Email address:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" name="email" required id="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="contactuscontent">Suggestions:</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="contactuscontent" name="suggestions" required placeholder="If you would like to improve or add support for a language, Please contact!"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-sm-12">
+                        <button type="submit" form="ContactUs" id="contactusSubmit" class="btn btn-default">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="snackbar">Thanks for contacting us!</div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!-- DataTables  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+        $("#languageOptions").change(function () {
+            var selectedLanguage = $("#languageOptions").val();
+            document.location.href = document.location.origin + "/" + selectedLanguage;
+        });
+
+        $("#languageOptionsDesktop").change(function () {
+            var selectedLanguage = $("#languageOptionsDesktop").val();
+            document.location.href = document.location.origin + "/" + selectedLanguage;
+        });
+        $("#ContactUs").validate({
+            rules: {
+                name: "required",
+                email: "required",
+                suggestions: "required"
+            },
+            messages: {
+                name: "Please specify your name",
+                email: "Please specify your email",
+                suggestions: "Please specify your suggestions"
+
+            }
+        })
+        $("#ContactUs").submit(function (e) {
+            if ($('#ContactUs').valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/home",
+                    data: $("#ContactUs").serialize(),
+                    success: function () {
+                        var x = document.getElementById("snackbar");
+                        x.className = "show";
+                        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    }
+                });
+                $('#contactUsModal').modal('toggle');
+                $('#ContactUs')[0].reset();
+            }
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        $(document).ready(function () {
+            $('table.dashboardTable').DataTable({
+                paging: false,
+                "bInfo": false,
+                "order": [[1, "desc"]]
+            });
+        });
+    </script>
+</body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                Developed by - Team 'Digital For Everyone' <a class="sm" href="" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

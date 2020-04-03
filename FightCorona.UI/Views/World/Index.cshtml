@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Coronavirus World Dashboard";
+    ViewBag.Source = "Johns Hopkins University, United States";
+    ViewBag.SourceReferenceLink = "https://coronavirus.jhu.edu/map.html";
+    ViewBag.LastUpdated = Model.LastUpdated.ToString("dd.MM.yyyy") + " at " + Model.LastUpdated.ToString("hh:mm tt");
+}
+@Styles.Render("~/Content/css/worldMap")
+
+@model  FightCorona.Models.WorldDashboardData
+
+<div class="dashboard">
+    <br />
+    @Html.Partial("_DashboardPanel", Model.DashboardPanelData)
+
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("_DashboardTable", Model.CountryWiseData)
+        </div>
+    </div>
+</div>

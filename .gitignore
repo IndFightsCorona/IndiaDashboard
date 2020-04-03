@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/FightCorona.UI/bin
+/FightCorona.UI/obj
+/packages
+/FightCorona.UI/Properties/PublishProfiles/FightCoronaUI - Web Deploy.pubxml.user
+/FightCorona.Business/obj
+/FightCorona.Business/bin
+/FightCorona.Models/bin
+/FightCorona.Models/obj
+/FightCorona.Localization/obj
+/FightCorona.Localization/bin
+/FightCorona.Data/obj
+/FightCorona.Data/bin
+/FightCorona.Localization/FightCorona.Localization.csproj.user
+/FightCorona.UI/FightCorona.UI.csproj.user

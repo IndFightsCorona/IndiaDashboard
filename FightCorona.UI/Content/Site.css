@@ -1,0 +1,334 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+   padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+/*Nav Bar - Start*/
+
+.navbar-custom {
+    border-color: grey;
+}
+
+.navbar-inverse {
+    background-color: #337ab7;
+    border-color: #185080;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        border-color: #fff;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #ffffff;
+    }
+
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+        background-color: #4883b7;
+    }
+
+.brand {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.lang-select-drop-down {
+    color: #fff !important;
+    background-color: #337ab7 !important;
+    background-image: none !important;
+    border: 1px solid #9accf7 !important;
+}
+
+    .lang-select-drop-down:focus {
+        box-shadow: none;
+        border: 1px solid #6f6f6f;
+    }
+
+.lang-top-8 {
+    margin-top: 8px !important;
+}
+
+/*Nav Bar - End*/
+
+.source {
+    padding: 5px 0;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
+/* Chart - Start*/
+
+.chart {
+    padding: 10px 0;
+}
+
+div#cases-over-days svg {
+    pointer-events: none;
+}
+
+div#new-cases-over-days svg {
+    pointer-events: none;
+}
+
+/* Chart - End*/
+
+
+.cases-panel-sub-text {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.cases-panel-main-text {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+footer {
+    padding-top: 15px;
+    border-top: 0.1px solid grey;
+}
+
+@media only screen and (min-width: 240px) and (max-width: 767px) {
+    .lang-mobile-right {
+        right: 30px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+    .lang-mobile-right {
+        position: absolute !important;
+        margin-top: 8px !important;
+        right: 110px !important;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 830px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 125px !important;
+    }
+}
+
+@media only screen and (min-width: 831px) and (max-width: 850px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 140px !important;
+    }
+}
+
+@media only screen and (min-width: 851px) and (max-width: 870px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 155px !important;
+    }
+}
+
+@media only screen and (min-width: 871px) and (max-width: 890px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 170px !important;
+    }
+}
+
+@media only screen and (min-width: 891px) and (max-width: 910px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 185px !important;
+    }
+}
+
+@media only screen and (min-width: 911px) and (max-width: 930px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 185px !important;
+    }
+}
+
+@media only screen and (min-width: 931px) and (max-width: 950px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 185px !important;
+    }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 970px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 195px !important;
+    }
+}
+
+@media only screen and (min-width: 971px) and (max-width: 991px) {
+    .lang-mobile-right {
+        margin-top: 8px !important;
+        position: absolute !important;
+        right: 205px !important;
+    }
+}
+
+.error {
+    color: red;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 60px;
+    font-size: 17px;
+}
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 60px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 60px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 60px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/*** START - Table ***/
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.padd-rem table, td, th {
+    border: 0px;
+    text-align: left;
+}
+
+.dataTables_filter {
+    padding: 4px 4px;
+}
+
+table.dataTable thead th, table.dataTable thead td
+{
+    border-bottom: 0px !important;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+    background-color: #337ab7;
+    border-radius: 10px;
+}
+
+/*** END - Table  ***/
