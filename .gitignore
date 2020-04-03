@@ -17,3 +17,4 @@
 /FightCorona.Data/bin
 /FightCorona.Localization/FightCorona.Localization.csproj.user
 /FightCorona.UI/FightCorona.UI.csproj.user
+/FightCorona.UI/Properties/PublishProfiles/*.pubxml
