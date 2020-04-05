@@ -7,4 +7,4 @@ fightcorona.co.in project involves the below important areas,
 3. Data collection - Involves manually updating the state specific numbers in Google sheets
 4. Localization - This tool helps in generating resource files for different languages from Google sheet where translations are available
 
-Inviting volunteers to help, to collaborate via Telegram - https://t.me/joinchat/Na8AMRmWQ52LSSLwUxHj7Q
+We would like this to be a platform and extends it suit to the local needs at state and districte levels. Inviting volunteers to help! To collaborate via Telegram - https://t.me/joinchat/Na8AMRmWQ52LSSLwUxHj7Q
