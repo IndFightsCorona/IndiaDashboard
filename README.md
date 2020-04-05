@@ -4,7 +4,7 @@ How can you contribute? This project involves the below important areas,
 
 1. Dashboard - UI project is written using ASP.Net MVC Razor view
 2. DB Update - Windows service app is written using C# that updates the numbers in DB
-3. Data collection - Involves manually updating the state specific numbers in Google sheets
+3. Data collection - involves manually updating the state-specific numbers in Google sheets
 4. Localization - This tool helps in generating resource files for different languages from Google sheet where translations are available
 
-We would like this to be a platform and extends it suit to the local needs at state and districte levels. Inviting volunteers to help! To collaborate, join the group in Telegram - https://t.me/joinchat/Na8AMRmWQ52LSSLwUxHj7Q
+We would like this to be a platform and extends it to suit the local needs at state and district levels. Inviting volunteers to help! To collaborate, join the group in Telegram - https://t.me/joinchat/Na8AMRmWQ52LSSLwUxHj7Q
