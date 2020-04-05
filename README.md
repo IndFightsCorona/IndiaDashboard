@@ -1,4 +1,4 @@
-Project goal: It is important that the Coronavirus related information is available to all people in the language they understand. Aim of this project is to make sure reliable information on Coronavirus is available in Indian languages.
+Goal: It is important that the Coronavirus related information is available to all people in the language they understand. Aim of this project is to make sure reliable information on Coronavirus is available in Indian languages.
 
 fightcorona.co.in project involves the below important areas,
 
