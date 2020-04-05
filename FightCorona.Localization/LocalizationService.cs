@@ -1,5 +1,6 @@
 ﻿using FightCorona.Localization.Resources.Countries;
 using FightCorona.Localization.Resources.Dashboard;
+using FightCorona.Localization.Resources.Districts;
 using FightCorona.Localization.Resources.States;
 using FightCorona.Models;
 
@@ -17,6 +18,8 @@ namespace FightCorona.Localization
                     return Countries.ResourceManager.GetString(key);
                 case ResourceCategory.States:
                     return States.ResourceManager.GetString(key);
+                case ResourceCategory.Districts:
+                    return Districts.ResourceManager.GetString(key);
                 default:
                     return string.Empty;
             }

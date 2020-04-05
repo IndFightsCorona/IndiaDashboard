@@ -1,18 +1,18 @@
-﻿
-@{
-    ViewBag.Title = "Coronavirus World Dashboard";
-    ViewBag.Source = "Johns Hopkins University, United States";
-    ViewBag.SourceReferenceLink = "https://coronavirus.jhu.edu/map.html";
-    ViewBag.LastUpdated = Model.LastUpdated.ToString("dd.MM.yyyy") + " at " + Model.LastUpdated.ToString("hh:mm tt");
-}
-@Styles.Render("~/Content/css/worldMap")
+﻿@using FightCorona.Models
+@using FightCorona.Localization
 
 @model  FightCorona.Models.DashboardData
+
+@{
+    ViewBag.Title = "Coronavirus State Dashboard";
+    ViewBag.Source = " Ministry of Health and Family Welfare - Government of India";
+    ViewBag.SourceReferenceLink = "https://www.mohfw.gov.in/";
+    ViewBag.LastUpdated = Model.LastUpdated.ToString("dd.MM.yyyy") + " at " + Model.LastUpdated.ToString("hh:mm tt");
+}
 
 <div class="dashboard">
     <br />
     @Html.Partial("_DashboardPanel", Model.PanelData)
-
     <br />
     <div class="row">
         <div class="col-md-12">
@@ -20,3 +20,4 @@
         </div>
     </div>
 </div>
+

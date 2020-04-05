@@ -219,6 +219,9 @@
   <data name="Tiruvannamalai" xml:space="preserve">
     <value>திருவண்ணாமலை</value>
   </data>
+  <data name="Unmapped" xml:space="preserve">
+    <value>மாவட்ட அளவிலான தகவல்கள் தெரியாதவை</value>
+  </data>
   <data name="Vellore" xml:space="preserve">
     <value>வேலூர்</value>
   </data>

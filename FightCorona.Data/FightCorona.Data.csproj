@@ -48,6 +48,7 @@
     <Compile Include="Services\DataServiceBase.cs" />
     <Compile Include="Helper\SqlDbContextHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StatesDataService.cs" />
     <Compile Include="Services\WorldDataService.cs" />
     <Compile Include="Services\IndiaDataService.cs" />
   </ItemGroup>

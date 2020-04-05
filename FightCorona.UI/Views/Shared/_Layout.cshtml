@@ -39,6 +39,7 @@
                 <ul class="nav navbar-nav pull-right">
                     <li>@Html.ActionLink(LocalizationService.GetText(ResourceCategory.Countries, "India"), "", "")</li>
                     <li>@Html.ActionLink(LocalizationService.GetText(ResourceCategory.Dashboard, "World"), "Index", "world")</li>
+                    <li>@Html.ActionLink(LocalizationService.GetText(ResourceCategory.States, "TAMILNADU"), "states", "india" ,new {id = "tn" }, null)</li>
                     <li class="hidden-sm hidden-xs lang-top-8">
                         @Html.DropDownList("Language", new SelectList(LanguageService.GetLanguageOptions(), "Value", "Text", Thread.CurrentThread.CurrentUICulture.Name), new { @class = "form-control lang-select-drop-down", @id = "languageOptionsDesktop" })
                     </li>

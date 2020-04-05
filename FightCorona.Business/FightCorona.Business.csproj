@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Services\ContactUsService.cs" />
     <Compile Include="Services\DashboardChartsService.cs" />
+    <Compile Include="Services\StatesDashboardViewService.cs" />
     <Compile Include="Services\WorldDashboardViewService.cs" />
     <Compile Include="Services\IndiaDashboardViewService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

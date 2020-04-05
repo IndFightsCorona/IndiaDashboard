@@ -367,6 +367,15 @@ namespace FightCorona.Localization.Resources.Districts {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unmapped.
+        /// </summary>
+        internal static string Unmapped {
+            get {
+                return ResourceManager.GetString("Unmapped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vellore.
         /// </summary>
         internal static string Vellore {

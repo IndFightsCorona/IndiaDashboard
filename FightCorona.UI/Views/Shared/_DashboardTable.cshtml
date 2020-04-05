@@ -23,13 +23,16 @@
                 <tbody>
                     @foreach (var item in Model.Items)
                     {
-                    <tr>
-                        <td align="center" width="83" valign="bottom">@(LocalizationService.GetText(Model.ResourceCategory, item.Code) ?? item.Code)</td>
-                        <td align="center" width="91" valign="bottom">@item.Total</td>
-                        @*<td align="center" width="91" valign="bottom">@item.Active</td>*@
-                        <td align="center" width="83" valign="top">@item.Cured</td>
-                        <td align="center" width="83" valign="top">@item.Deaths</td>
-                    </tr>
+                        if (item.Total != 0)
+                        {
+                            <tr>
+                                <td align="center" width="83" valign="bottom">@(LocalizationService.GetText(Model.ResourceCategory, item.Code.Trim()) ?? item.Code)</td>
+                                <td align="center" width="91" valign="bottom">@item.Total</td>
+                                @*<td align="center" width="91" valign="bottom">@item.Active</td>*@
+                                <td align="center" width="83" valign="top">@item.Cured</td>
+                                <td align="center" width="83" valign="top">@item.Deaths</td>
+                            </tr>
+                        }
                     }
 
                 </tbody>

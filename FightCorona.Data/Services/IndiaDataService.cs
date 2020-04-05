@@ -46,7 +46,7 @@ namespace FightCorona.Data.Services
 
         public DateTime GetLastUpdatedDate()
         {
-            var query = "Select Top 1 LastUpdated  From LastUpdates";
+            var query = "Select Top 1 Version From ReaderStatus where ReaderName  = 'MohfwDataReader'";
             return Execute<DateTime>(query)[0];
         }
         public List<CurrentStatusData> GetStateWiseData()

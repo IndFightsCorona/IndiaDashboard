@@ -8,17 +8,24 @@ namespace FightCorona.UI.Controllers
     {
         private readonly IndiaDashboardViewService _dashboardViewService;
         private readonly ContactUsService _contactUSService;
+        private readonly StatesDashboardViewService _statesDashboardViewService;
 
         public IndiaController()
         {
             _dashboardViewService = new IndiaDashboardViewService();
             _contactUSService = new ContactUsService();
+            _statesDashboardViewService = new StatesDashboardViewService();
         }
 
         [OutputCache(Duration = 86400, VaryByParam = "none")]
         public ActionResult Index()
         {
             return View(_dashboardViewService.GetDashboardData());
+        }
+
+        public ActionResult States(string id)
+        {
+            return View(_statesDashboardViewService.GetDashboardData(id));
         }
 
         [HttpPost]

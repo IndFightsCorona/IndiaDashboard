@@ -340,7 +340,7 @@ namespace FightCorona.Localization.Resources.States {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TAMIL NADU.
+        ///   Looks up a localized string similar to Tamil Nadu.
         /// </summary>
         public static string TAMILNADU {
             get {

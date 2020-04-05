@@ -159,4 +159,7 @@
   <data name="World" xml:space="preserve">
     <value>உலகம்</value>
   </data>
+  <data name="Districtwise_Status" xml:space="preserve">
+    <value>மாவட்ட வாரியான  நிலவரம்</value>
+  </data>
 </root>

@@ -66,10 +66,10 @@
     <Compile Include="Charts\ChartConfig.cs" />
     <Compile Include="Charts\DataSource.cs" />
     <Compile Include="ContactUsModel.cs" />
-    <Compile Include="DashboardPanelData.cs" />
-    <Compile Include="DashboardTableData.cs" />
-    <Compile Include="WorldDashboardData.cs" />
-    <Compile Include="IndiaDashboardData.cs" />
+    <Compile Include="Dashboard\DashboardPanelData.cs" />
+    <Compile Include="Dashboard\DashboardTableData.cs" />
+    <Compile Include="Dashboard\DashboardData.cs" />
+    <Compile Include="Dashboard\IndiaDashboardData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceCategory.cs" />
     <Compile Include="CurrentStatusData.cs" />

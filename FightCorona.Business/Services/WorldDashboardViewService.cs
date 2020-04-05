@@ -19,16 +19,16 @@ namespace FightCorona.Business.Services
 
         #region Public Methods
 
-        public WorldDashboardData GetDashboardData()
+        public DashboardData GetDashboardData()
         {
             var lastTwoUpdatedTime = _worldDataService.GetLastTwoUpdatedTime();
             var countryWiseStatus = _worldDataService.GetWorldData(ConvertToIndiaDateTimeString(lastTwoUpdatedTime.First()));
 
-            return new WorldDashboardData
+            return new DashboardData
             {
-                DashboardPanelData = GetDashboardPanelData(countryWiseStatus, lastTwoUpdatedTime.Last()),
+                PanelData = GetDashboardPanelData(countryWiseStatus, lastTwoUpdatedTime.Last()),
                 LastUpdated = TimeZoneInfo.ConvertTimeFromUtc(lastTwoUpdatedTime.First(), India_Standard_Time),
-                CountryWiseData = GetCountryWiseData(countryWiseStatus)
+                TableData = GetCountryWiseData(countryWiseStatus)
             };
         }
 

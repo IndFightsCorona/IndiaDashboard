@@ -172,6 +172,7 @@
     <Content Include="Views\World\Index.cshtml" />
     <Content Include="Views\World\_WorldMap.cshtml" />
     <Content Include="Views\Shared\_DashboardPanel.cshtml" />
+    <Content Include="Views\India\States.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

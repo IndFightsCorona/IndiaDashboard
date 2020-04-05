@@ -162,4 +162,10 @@
   <data name="World" xml:space="preserve">
     <value>World</value>
   </data>
+  <data name="District" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="Districtwise_Status" xml:space="preserve">
+    <value>District Wise Status</value>
+  </data>
 </root>

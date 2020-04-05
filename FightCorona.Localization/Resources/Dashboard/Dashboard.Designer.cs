@@ -115,6 +115,24 @@ namespace FightCorona.Localization.Resources.Dashboard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to District.
+        /// </summary>
+        internal static string District {
+            get {
+                return ResourceManager.GetString("District", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to District Wise Status.
+        /// </summary>
+        internal static string Districtwise_Status {
+            get {
+                return ResourceManager.GetString("Districtwise_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Migrated.
         /// </summary>
         internal static string MIGRATED {
@@ -160,6 +178,15 @@ namespace FightCorona.Localization.Resources.Dashboard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to State Wise Status.
         /// </summary>
         internal static string Statewise_Status {
@@ -174,6 +201,15 @@ namespace FightCorona.Localization.Resources.Dashboard {
         internal static string Total {
             get {
                 return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to World.
+        /// </summary>
+        internal static string World {
+            get {
+                return ResourceManager.GetString("World", resourceCulture);
             }
         }
     }

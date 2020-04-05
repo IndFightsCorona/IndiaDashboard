@@ -23,9 +23,9 @@ namespace FightCorona.Business.Services
             {
                 TotalCasesChart = _dashboardChartsService.GetTotalCasesChart(),
                 NewCasesChart = _dashboardChartsService.GetNewCasesChart(),
-                DashboardPanelData = _indiaDataService.GetDashboardPanelData(),
+                PanelData = _indiaDataService.GetDashboardPanelData(),
                 LastUpdated = _indiaDataService.GetLastUpdatedDate(),
-                StateWiseData = GetStateWiseData()
+                TableData = GetStateWiseData()
             };
         }
 
