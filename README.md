@@ -1,5 +1,7 @@
 Goal: It is important that the Coronavirus related information is available to all people in the language they understand. Aim of this project is to make sure reliable information on Coronavirus is available in Indian languages.
 
+How can you contribute?
+
 fightcorona.co.in project involves the below important areas,
 
 1. Dashboard - UI project written using ASP.Net MVC Razor view
